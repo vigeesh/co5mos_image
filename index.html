@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="vigeesh, cobold, co5bold, CO5MoS, simulation" />
+
+    <title>CO5MoS: CO5BOLD Simulation Monitoring System</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3-time-format.v2.min.js"></script>
+
+    <!-- <script type="application/json-seq" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/fullset2.json"></script>
+    <script type="application/json-seq" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/frtop2.json"></script>
+    <script type="application/json-seq" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/walltime2.json"></script> -->
+
+    <!-- <script type="application/json" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/fullset.json"></script>
+    <script type="application/json" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/frtop.json"></script>
+    <script type="application/json" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/walltime.json"></script> -->
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	
+    <link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="main2.css">
+
+</head>
+
+
+<body>
+    <p id="headermain" , align="center"><b>CO5MoS</b></p>
+    <p id="headersub" , align="center">CO5BOLD Simulation Monitoring System</p>
+	
+	
+	<div><i class="fa fa-circle text-danger Blink"></i>&nbsp; SVGd3r15bh5cp1p </div> 
+
+    <div class="row  row-eq-height" id="blocks">
+        <div class="col-sm-4" id="blockl">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Temperature, Field, Velocity
+                    </div>
+                    <div class="panel-body">
+						<img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r15bh5cp1p_crs_plot1.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" id="blockcenter">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center" style="max-height: 10;">
+                        Plasma-Beta and Field Inclination
+                        <div id="blocktop"></div>
+                    </div>
+                    <div class="panel-body">
+                        <img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r15bh5cp1p_crs_plot3.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" id="blockr">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Bolometric, Magnetic field
+                    </div>
+                    <div class="panel-body">
+                        <img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r15bh5cp1p_crs_plot2.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div><i class="fa fa-circle text-danger Blink"></i>&nbsp; SVGd3r16bhCcp1p </div> 
+    <div class="row  row-eq-height" id="blocks">
+        <div class="col-sm-4" id="blockl">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Temperature, Field, Velocity
+                    </div>
+                    <div class="panel-body">
+						<img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r16bhCcp1p_crs_plot1.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" id="blockcenter">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center" style="max-height: 10;">
+                        Plasma-Beta and Field Inclination
+                        <div id="blocktop"></div>
+                    </div>
+                    <div class="panel-body">
+                        <img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r16bhCcp1p_crs_plot3.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" id="blockr">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Bolometric, Magnetic field
+                    </div>
+                    <div class="panel-body">
+                        <img class="img-responsive" src="http://www3.leibniz-kis.de/~vigeesh/simprogress/SVGd3r16bhCcp1p_crs_plot2.png" id="intensityimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    <p id="footer" , align="center">© 2011-2019 Vigeesh Gangadharan</p>
+</body>
+
+</html>
